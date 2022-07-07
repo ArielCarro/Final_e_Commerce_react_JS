@@ -41,3 +41,16 @@
   width: 50px;
   margin: 0 20px 0 20px;
 }
+
+.brandLogo{
+  width: 50px;
+  margin: 0 20px 0 20px;
+}
+
+.navBar{
+  background-color: #0600b5;
+}
+
+.navLink{
+  color: aliceblue;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from '../../img/react-bootstrap.svg'
+import cart from '../../img/cart.svg'
 
 const CartWidget = () => {
   return (
     <div>
-        <img src={logo} className='cartWidget'/>
+        <img src={cart} className='cartWidget' alt=''/>
     </div>
   )
 }
