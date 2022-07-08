@@ -9,7 +9,7 @@ function App() {
     <>
       <div className="App">
         <NavBar />
-        <ItemListContainer greeting="Soy un item list container" />
+        <ItemListContainer greeting="Este es un contador" />
       </div>
     </>
   );
