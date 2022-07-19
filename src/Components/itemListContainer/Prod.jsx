@@ -1,10 +1,10 @@
-import Card from 'react-bootstrap/card'
 import React from 'react'
+import Card from 'react-bootstrap/card'
 import ItemCount from './ItemCount'
 
 const Prod = ({ prod }) => {
     const { name, priceIva, imagen, stock } = prod
-    console.log(imagen)
+
     const onAdd = (count) =>{
         alert (`Se han añadido ${count} productos al carrito`)
       }
@@ -17,7 +17,7 @@ const Prod = ({ prod }) => {
                    <p>Precio: ${priceIva}</p>    
                    <p>stock: {stock}</p> 
                 </Card.Text>
-                <ItemCount init={0} stock={stock} onAdd={onAdd}/>
+                <ItemCount init={0} stock={stock} onAdd={onAdd} prodId={prod.id}/>
             </Card.Body>
         </Card>
     )

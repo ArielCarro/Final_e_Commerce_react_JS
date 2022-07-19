@@ -5,33 +5,38 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import CartWidget from './CartWidget'
 import Logo from './Logo'
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className='navBar'>
             <Container className='navBarContainer'>
                 < div className='logoBrand'>
-                    <Logo />
-                    <Navbar.Brand href="#home">Oracle Sport</Navbar.Brand>
-                </ div>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#hombres">Hombres</Nav.Link>
-                            <Nav.Link href="#mujeres">Mujeres</Nav.Link>
-                            <NavDropdown title="Accesorios" id="collasible-nav-dropdown" >
-                                <NavDropdown.Item href="#action/3.1">Barras y Discos</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Bandas</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Guantes y Calleras</NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
+                    <Link to="/">
+                        <Logo />
+                        <Navbar.Brand href="#home">Oracle Sport</Navbar.Brand>
+                    </Link>
 
-                        <Nav>
-                            <Nav.Link href="#contactanos">Contactanos</Nav.Link>
-                        </Nav>
+                </ div>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        <NavLink to='/categoria/hombres' className={'nav-link'}>Hombres</NavLink>
+                        <NavLink to='/categoria/mujeres'className={'nav-link'}>Mujeres</NavLink>
+                        <NavDropdown title="Tipo" id="collasible-nav-dropdown" >
+                            <NavDropdown.Item href="#action/3.1">Remeras</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Zapatillas</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+
+                    <Nav>
+                        <Nav.Link href="#contactanos">Contactanos</Nav.Link>
+                    </Nav>
+                    <Link to={'/cart'}>
                         <CartWidget />
-                    </Navbar.Collapse>
-                
+                    </Link>
+                </Navbar.Collapse>
+
             </Container>
         </Navbar>
     )

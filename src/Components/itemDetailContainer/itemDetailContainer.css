@@ -1,0 +1,33 @@
+.detailView{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(236, 201, 61);
+    height:90vh;
+}
+
+.prodDetailCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(230, 238, 187);
+}
+
+.detailCardImg{
+    border-right-style: solid;
+    border-width: 1px;
+    border-color:  rgb(131, 152, 12);
+    width: 35vw;
+}
+
+.detailCardBody{
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 35vw;
+}
+.detailCardBody p{
+    text-align: center;
+margin:10px
+}
