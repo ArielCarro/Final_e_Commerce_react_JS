@@ -1,5 +1,6 @@
 import React from 'react'
 import ProdDetail from './ProdDetail'
+import Spinner from 'react-bootstrap/Spinner';
 
 
 const ItemDetail = ({prods , productId}) => {
@@ -8,7 +9,10 @@ const ItemDetail = ({prods , productId}) => {
     console.log(prod)
 
   return (
-    <div className='detailView' >{prod===undefined? "Cargando..." : <ProdDetail prod={prod}/>}</div>
+    <div className='detailView' >{prod===undefined? <Spinner animation="border" variant="dark" /> : <ProdDetail prod={prod}/>}</div>
+
+    
+
   )
 }
 

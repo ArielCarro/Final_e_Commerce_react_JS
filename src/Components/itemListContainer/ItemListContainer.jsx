@@ -8,19 +8,17 @@ import { useParams } from 'react-router-dom'
 const ItemListContainer = () => {
 
   const [prods, setProds] = useState([])
-  const{genderId}=useParams()
-  console.log(genderId);
+  const { genderId} = useParams()
+
 
 
   useEffect(() => {
 
-    if(genderId!==undefined){
-      getFetch().then(res => setProds(res.filter(prod=>prod.gender===genderId))).catch(error => console.log(error))
-    }else{
+    if (genderId !== undefined) {
+      getFetch().then(res => setProds(res.filter(prod => prod.gender === genderId))).catch(error => console.log(error))
+    } else {
       getFetch().then(res => setProds(res)).catch(error => console.log(error))
-
     }
-
 
   }, [genderId])
 

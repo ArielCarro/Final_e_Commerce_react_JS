@@ -8,6 +8,7 @@ import Logo from './Logo'
 import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
+
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className='navBar'>
             <Container className='navBarContainer'>
@@ -21,10 +22,10 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink to='/categoria/hombres' className={'nav-link'}>Hombres</NavLink>
-                        <NavLink to='/categoria/mujeres'className={'nav-link'}>Mujeres</NavLink>
+                        <NavLink to='/category/hombres' className={'nav-link'}>Hombres</NavLink>
+                        <NavLink to='/category/mujeres'className={'nav-link'}>Mujeres</NavLink>
                         <NavDropdown title="Tipo" id="collasible-nav-dropdown" >
-                            <NavDropdown.Item href="#action/3.1">Remeras</NavDropdown.Item>
+                            <NavLink to={`/category/remeras`} className='dropdown-item'>Remeras</NavLink>
                             <NavDropdown.Item href="#action/3.2">Zapatillas</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

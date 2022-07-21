@@ -17,11 +17,10 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route index path='/' element={<ItemListContainer />} />
-          <Route path='/categoria/:genderId' element={<ItemListContainer />}/>
-          <Route path='/categoria/:typeId' element={<ItemListContainer />}/>
+          <Route index path='/' element={<ItemListContainer/>} />
+          <Route path='/category/:genderId' element={<ItemListContainer />}/>
 
-          <Route path='/detalle/:productId' element={
+          <Route path='/item/:productId' element={
             <Suspense fallback={<div>Cargando...</div>}>
               <ItemDetailContainer />
             </Suspense>

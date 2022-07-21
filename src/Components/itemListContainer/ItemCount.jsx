@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button'
 import { useState } from "react"
 import { Link } from 'react-router-dom';
 
-const ItemCount = ({ init, stock, onAdd, prodId }) => {
+const ItemCount = ({ init, stock, onAdd, prodId, detail }) => {
 
     const [count, setCounter] = useState(init)
 
@@ -29,9 +29,16 @@ const ItemCount = ({ init, stock, onAdd, prodId }) => {
                 <Button variant="primary" onClick={incre} className="countBtn">+</Button>
                 <Button variant="primary" onClick={decre} className="countBtn">-</Button>
                 <Button variant="primary" onClick={reset} className="countBtn">Reset</Button>
-                <Link to={`/detalle/${prodId}`}>
-                <Button variant="primary" className="countBtn">Ver detalle</Button>
-                </Link>
+                {detail ?
+                    <Link to={`/`}>
+                        <Button variant="primary" className="countBtn">Volver</Button>
+                    </Link>
+                    :
+                    <Link to={`/item/${prodId}`}>
+                        <Button variant="primary" className="countBtn">Ver detalle</Button>
+                    </Link>
+                }
+
             </div>
 
         </div>
