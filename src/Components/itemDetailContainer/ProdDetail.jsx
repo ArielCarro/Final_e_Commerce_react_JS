@@ -1,16 +1,21 @@
 import React from 'react'
 import Card from 'react-bootstrap/card'
 import ItemCount from './../itemListContainer/ItemCount'
+import { useState } from 'react'
 
 const ProdDetail = ({ prod }) => {
-
   const { name, priceIva, imagen, stock } = prod
+
+  const [added,setAdded]=useState(false)
+
+  const onAdd = (count) =>{
+      alert (`Se han añadido ${count} productos al carrito`)
+      setAdded(true)
+    }
+
+
   const detail=true
   console.log(name)
-  const onAdd = (count) => {
-    alert(`Se han añadido ${count} productos al carrito`)
-    
-  }
   return (
     <div className="prodDetailCard">
       <img src={imagen} className="detailCardImg" alt='Product' />
@@ -23,7 +28,7 @@ const ProdDetail = ({ prod }) => {
           <p>Precio: ${priceIva}</p>
           <p>stock: {stock}</p>
         </Card.Text>
-        <ItemCount init={0} stock={stock} onAdd={onAdd} prodId={prod.id} detail={detail} />
+        <ItemCount init={0} stock={stock} prodId={prod.id} detail={detail} onAdd={onAdd} added={added} />
       </div>
     </div>
   )

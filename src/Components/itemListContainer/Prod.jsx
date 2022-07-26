@@ -5,12 +5,9 @@ import ItemCount from './ItemCount'
 const Prod = ({ prod }) => {
     const { name, priceIva, imagen, stock } = prod
 
-
+    const added=false
     const detail=false
 
-    const onAdd = (count) =>{
-        alert (`Se han añadido ${count} productos al carrito`)
-      }
     return (
         <Card className="prodCard">
             <Card.Img variant="top" src={imagen} className="cardImg" />
@@ -20,7 +17,7 @@ const Prod = ({ prod }) => {
                    <p>Precio: ${priceIva}</p>    
                    <p>stock: {stock}</p> 
                 </Card.Text>
-                <ItemCount init={0} stock={stock} onAdd={onAdd} prodId={prod.id} detial={detail}/>
+                <ItemCount init={0} stock={stock}  prodId={prod.id} detial={detail} added={added}/>
             </Card.Body>
         </Card>
     )
