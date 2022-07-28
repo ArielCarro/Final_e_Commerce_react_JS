@@ -2,10 +2,9 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import { useState } from "react"
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
 
-const ItemCount = ({ init, stock, prodId, detail, onAdd, added}) => {
-
-
+const ItemCount = ({ init, stock, prodId, detail, onAdd, added }) => {
 
     const [count, setCounter] = useState(init)
 
@@ -18,33 +17,25 @@ const ItemCount = ({ init, stock, prodId, detail, onAdd, added}) => {
         count > init ? setCounter(count - 1) : alert(`La cantidad no puede ser menor que ${init}`)
     }
 
-
-
     return (
         <div className='counterComp'>
             <p>
                 Cantidad en Carrito: {count}
             </p>
-            <div>
-                <Button variant="primary" onClick={decre} className="countBtn">-</Button>
-                <Button variant="primary" onClick={incre} className="countBtn">+</Button>            
-                </div>
             {detail ?
                 <div>
+                    <Button variant="primary" onClick={decre} className="countBtn">-</Button>
+                    <Button variant="primary" onClick={incre} className="countBtn">+</Button>
                     <Link to={`/`}>
                         <Button variant="primary" className="countBtn">Volver</Button>
                     </Link>
-                    {added? 
-                    <Link to={`/cart`}>
-                        <Button variant="primary" className="countBtn">Ir al carrito</Button>
-                    </Link>
-                    :
-                    // <Link to={`/`}>
-                        <Button variant="primary" className="countBtn" onClick={()=>(onAdd(count))}>Agregar al carrito</Button>
-                    // </Link>
-                    
-                     }
-                    
+                    {added ?
+                        <Link to={`/cart`}>
+                            <Button variant="primary" className="countBtn">Ir al carrito</Button>
+                        </Link>
+                        :
+                        <Button variant="primary" className="countBtn" onClick={() => (onAdd(count))}>Agregar al carrito</Button>
+                    }
                 </div>
                 :
                 <Link to={`/item/${prodId}`}>
