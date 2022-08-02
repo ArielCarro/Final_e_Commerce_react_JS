@@ -1,7 +1,19 @@
 .cartWidget{
-  width: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin: 0 20px 0 20px;
 }
+
+.cartTxtWidget{
+text-decoration: none;
+color: rgba(255,255,255,.55)
+}
+
+.cartImgWidget{
+  width: 50px;
+}
+
 
 .brandLogo{
   width: 50px;
@@ -10,6 +22,7 @@
 
 .navBar{
   background-color: #0600b5;
+
 }
 
 .navBarContainer{

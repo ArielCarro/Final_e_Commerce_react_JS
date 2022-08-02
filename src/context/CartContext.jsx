@@ -26,8 +26,18 @@ const [cartList, setCartList] = useState([])
         test==0 && setCartList([...cartList, objProd])
     }
 
+    const removeProd = (prod) => {
+        let index = cartList.indexOf(prod)
+        cartList.splice(index, 1)
+        setCartList([...cartList])
+      }
+
     const clearCart=()=>{
         setCartList([])
+    }
+
+    const cartLength=()=>{
+        return cartList.length
     }
 
     return (
@@ -35,6 +45,8 @@ const [cartList, setCartList] = useState([])
             cartList,
             addToCart,
             clearCart,
+            removeProd,
+            cartLength,
         }}>
             {children}
         </CartContext.Provider>

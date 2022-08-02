@@ -8,6 +8,7 @@ const ItemCount = ({ init, stock, prodId, detail, onAdd, added }) => {
 
     const [count, setCounter] = useState(init)
 
+    const { cartList } = useCartContext()
 
     const incre = () => {
         count < stock ? setCounter(count + 1) : alert("Ha alcanzado el stock máximo")
@@ -20,7 +21,10 @@ const ItemCount = ({ init, stock, prodId, detail, onAdd, added }) => {
     return (
         <div className='counterComp'>
             <p>
-                Cantidad en Carrito: {count}
+                Cantidad en Carrito:
+                {cartList.length? cartList.map((product)=>{
+                    return product.id===prodId? product.count:"0"
+                }):"0"}
             </p>
             {detail ?
                 <div>

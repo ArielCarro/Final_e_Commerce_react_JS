@@ -1,0 +1,58 @@
+.cartContainer{
+background-color: rgb(236, 201, 61);
+min-height:95vh;
+padding: 10px;
+width: 100vw;
+}
+.cartProd{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    background-color: rgb(230, 238, 187);
+}
+.cartCardImg{
+    width: 150px;
+}
+.cartCardTxt{
+    background-color:  rgb(230, 238, 187);
+    text-align: center;
+    height: 100%;
+    margin: 10px;
+    width: 20%;
+}
+.cartCardBody{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cartBin{
+    width: 30px;
+}
+.underCart{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 70vw;
+}
+.cartTotalPrice{
+    background-color:  rgb(230, 238, 187);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px;
+}
+.emptyCart{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.emptyCartBtn{
+
+    align-self: center;
+}
+.emptyCartTxt{
+    align-self: center;
+}

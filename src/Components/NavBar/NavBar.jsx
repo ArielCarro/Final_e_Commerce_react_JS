@@ -7,7 +7,10 @@ import CartWidget from './CartWidget'
 import Logo from './Logo'
 import { Link, NavLink } from 'react-router-dom'
 
+
 const NavBar = () => {
+
+
 
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className='navBar'>
@@ -33,9 +36,7 @@ const NavBar = () => {
                     <Nav>
                         <Nav.Link href="#contactanos">Contactanos</Nav.Link>
                     </Nav>
-                    <Link to={'/cart'}>
                         <CartWidget />
-                    </Link>
                 </Navbar.Collapse>
 
             </Container>

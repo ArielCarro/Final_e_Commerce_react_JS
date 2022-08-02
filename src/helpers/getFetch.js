@@ -17,6 +17,6 @@ export const getFetch=()=>{
     return new Promise((res,rej)=>{
         setTimeout(()=>{
             res(prodList)
-        },2000)
+        },1)
     })
 }
