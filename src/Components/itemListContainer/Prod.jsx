@@ -3,14 +3,14 @@ import Card from 'react-bootstrap/card'
 import ItemCount from './ItemCount'
 
 const Prod = ({ prod }) => {
-    const { name, priceIva, imagen, stock } = prod
+    const { name, priceIva, image, stock } = prod
 
     const added=false
     const detail=false
 
     return (
         <Card className="prodCard">
-            <Card.Img variant="top" src={imagen} className="cardImg" />
+            <Card.Img variant="top" src={image} className="cardImg" />
             <Card.Body className='cardBody'>
                 <Card.Title className='cardTxt'>{name}</Card.Title>
                 <Card.Text className='cardTxt'>

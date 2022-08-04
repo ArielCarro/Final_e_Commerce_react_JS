@@ -20,16 +20,18 @@ const ItemCount = ({ init, stock, prodId, detail, onAdd, added }) => {
 
     return (
         <div className='counterComp'>
-            <p>
-                Cantidad en Carrito:
-                {cartList.length? cartList.map((product)=>{
-                    return product.id===prodId? product.count:"0"
-                }):"0"}
-            </p>
+            {detail && <p>{added ?
+                <span>{count == 1 ? `Se agregó ${count} unidad al carrito` : `Se agregaron ${count} unidades al carrito`}</span>
+                :
+                `Agregar al carrito ${count}`}
+            </p>}
             {detail ?
-                <div>
+                <div>{!added && 
+                <span>
                     <Button variant="primary" onClick={decre} className="countBtn">-</Button>
                     <Button variant="primary" onClick={incre} className="countBtn">+</Button>
+                </span>
+                }
                     <Link to={`/`}>
                         <Button variant="primary" className="countBtn">Volver</Button>
                     </Link>

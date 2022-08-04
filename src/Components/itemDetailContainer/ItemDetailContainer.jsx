@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getFetch } from '../../helpers/getFetch'
 import ItemDetail from './ItemDetail'
 import './itemDetailContainer.css'
-
+import {collection,getFirestore,getDocs} from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
 
@@ -12,8 +12,12 @@ const ItemDetailContainer = () => {
     const { productId } = useParams()
 
     useEffect(() => {
-        getFetch().then(res => setProds(res)).catch(error => console.log(error))
-    }, [])
+        const db=getFirestore()
+        const querryCollection=collection(db,'productos')
+        getDocs(querryCollection)
+        .then(resp=>setProds(resp.docs.map(prod=>({id:prod.id,...prod.data()}))))
+        console.log(prods);
+      }, [])
 
     return (
         <><div>

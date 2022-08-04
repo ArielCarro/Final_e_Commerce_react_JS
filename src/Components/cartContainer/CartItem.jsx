@@ -8,13 +8,13 @@ const CartItem = ({ prod}) => {
 
     const {removeProd} = useCartContext()
 
-    const { name, priceIva, imagen, count } = prod
+    const { name, priceIva, image, count } = prod
 
 
 
     return (
         <Card className="cartProd">
-            <Card.Img variant="top" src={imagen} className="cartCardImg" />
+            <Card.Img variant="top" src={image} className="cartCardImg" />
             <Card.Title className='cartCardTxt'>{name}</Card.Title>
             <Card.Body className='cartCardBody'>
                 <p>Cantidad: {count}</p>

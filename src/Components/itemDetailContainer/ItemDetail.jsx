@@ -5,14 +5,13 @@ import Spinner from 'react-bootstrap/Spinner';
 
 const ItemDetail = ({prods , productId}) => {
 
-    const prod=prods[productId-1]
-    console.log(prod)
-
+    const prod=prods.map(prod=>{
+      if(prod.id==productId){
+        return prod
+      }
+    }).filter(Boolean)[0]
   return (
     <div className='detailView' >{prod===undefined? <Spinner animation="border" variant="dark" /> : <ProdDetail prod={prod}/>}</div>
-
-    
-
   )
 }
 

@@ -5,13 +5,12 @@ import { useState } from 'react'
 import { useCartContext } from '../../context/CartContext'
 
 const ProdDetail = ({ prod }) => {
-  const { name, priceIva, imagen, stock } = prod
+  const { name, priceIva, image, stock } = prod
 
   const [added,setAdded]=useState(false)
   const {addToCart,cartList}=useCartContext()
 
   const onAdd = (count) => {
-    alert(`Se han añadido ${count} productos al carrito`)
     setAdded(true)
     addToCart({...prod,count })
 
@@ -22,7 +21,7 @@ const ProdDetail = ({ prod }) => {
   console.log(name)
   return (
     <div className="prodDetailCard">
-      <img src={imagen} className="detailCardImg" alt='Product' />
+      <img src={image} className="detailCardImg" alt='Product' />
       <div className='detailCardBody'>
         <div>
           <Card.Title className='cardTxt'>{name}</Card.Title>
