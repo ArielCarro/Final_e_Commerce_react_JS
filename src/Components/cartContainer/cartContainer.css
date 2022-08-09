@@ -4,12 +4,18 @@ min-height:95vh;
 padding: 10px;
 width: 100vw;
 }
+.cartContainerOk{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+    }
 .cartProd{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 70vw;
+    width: 50vw;
     background-color: rgb(230, 238, 187);
 }
 .cartCardImg{
@@ -35,7 +41,7 @@ width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: end;
-    width: 70vw;
+    width: 50vw;
 }
 .cartTotalPrice{
     background-color:  rgb(230, 238, 187);
@@ -55,4 +61,14 @@ width: 100vw;
 }
 .emptyCartTxt{
     align-self: center;
+}
+.formContainer{
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+}
+.form{
+    background-color:rgb(243, 241, 214);
+    padding: 15px;
+    width: 30vw;
 }

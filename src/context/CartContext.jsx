@@ -17,13 +17,15 @@ const [cartList, setCartList] = useState([])
     const addToCart = (objProd) => {
         let test=0
         cartList.map((prod)=>{
-            if(prod.id==objProd.id){
+            if(prod.id===objProd.id){
                 prod.count=prod.count+objProd.count
-                setCartList(cartList) 
+                setCartList([...cartList]) 
                 test=1
             }
+            return null
         })
-        test==0 && setCartList([...cartList, objProd])
+        test===0 && setCartList([...cartList, objProd])
+        return null
     }
 
     const removeProd = (prod) => {
@@ -36,8 +38,13 @@ const [cartList, setCartList] = useState([])
         setCartList([])
     }
 
-    const cartLength=()=>{
-        return cartList.length
+    const cartItems=()=>{
+        let totalItems=0
+        cartList.map((prod)=>{
+            totalItems+= prod.count
+            return null
+        })
+        return totalItems
     }
 
     return (
@@ -46,7 +53,7 @@ const [cartList, setCartList] = useState([])
             addToCart,
             clearCart,
             removeProd,
-            cartLength,
+            cartItems,
         }}>
             {children}
         </CartContext.Provider>
