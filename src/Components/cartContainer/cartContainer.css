@@ -1,16 +1,18 @@
-.cartContainer{
-background-color: rgb(236, 201, 61);
-min-height:95vh;
-padding: 10px;
-width: 100vw;
+.cartContainer {
+    background-color: rgb(236, 201, 61);
+    min-height: 95vh;
+    padding: 10px;
+    width: 100vw;
 }
-.cartContainerOk{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-    }
-.cartProd{
+
+.cartContainerOk {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cartProd {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,57 +20,100 @@ justify-content: space-between;
     width: 50vw;
     background-color: rgb(230, 238, 187);
 }
-.cartCardImg{
+
+.cartCardImg {
     width: 150px;
 }
-.cartCardTxt{
-    background-color:  rgb(230, 238, 187);
+
+.cartCardTxt {
+    background-color: rgb(230, 238, 187);
     text-align: center;
     height: 100%;
     margin: 10px;
     width: 20%;
 }
-.cartCardBody{
+
+.cartCardBody {
 
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.cartBin{
+
+.cartBin {
     width: 30px;
 }
-.underCart{
+
+.underCart {
     display: flex;
     flex-direction: row;
     justify-content: end;
     width: 50vw;
 }
-.cartTotalPrice{
-    background-color:  rgb(230, 238, 187);
+
+.cartTotalPrice {
+    background-color: rgb(230, 238, 187);
     font-size: 1.2rem;
     font-weight: 600;
     padding: 10px;
 }
-.emptyCart{
+
+.emptyCart {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
 }
-.emptyCartBtn{
+
+.emptyCartBtn {
 
     align-self: center;
 }
-.emptyCartTxt{
+
+.emptyCartTxt {
     align-self: center;
 }
-.formContainer{
-    width: 45vw;
+.cartBuyBtn{
+height: 50px;
+}
+.formContainer {
+    background-color: rgb(236, 201, 61);
+    width: 100vw;
+    height: 95vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.form{
-    background-color:rgb(243, 241, 214);
+
+.form {
+    background-color: rgb(243, 241, 214);
     padding: 15px;
     width: 30vw;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.formError{
+    color: rgb(132, 131, 131);
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 45vw;
+}
+
+.sbmtBtn {
+    text-decoration: none;
+    width: 10vw;
+    margin-right: 10px;
+}
+
+.rtrnBtn {
+    width: 10vw;
 }

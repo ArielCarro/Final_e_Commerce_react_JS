@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CartContainer from './Components/cartContainer/CartContainer';
 import CartContextProvider from './context/CartContext';
+import CartForm from './Components/cartContainer/CartForm';
 
 const ItemDetailContainer = lazy(() => import('./Components/itemDetailContainer/ItemDetailContainer'))
 
@@ -28,7 +29,7 @@ function App() {
               </Suspense>
             } />
             <Route path='/cart' element={<CartContainer />} />
-
+            <Route path='/cart/form' element={<CartForm/>} />
             <Route path='*' element={<Navigate to='/' />} />
           </Routes>
         </div>

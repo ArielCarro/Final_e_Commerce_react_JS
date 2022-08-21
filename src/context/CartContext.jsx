@@ -47,6 +47,17 @@ const [cartList, setCartList] = useState([])
         return totalItems
     }
 
+    const cartTotal=()=>{
+        let total = 0
+        cartList.map(prod => {
+            total = total + (prod.priceIva * prod.count)
+            return total
+        }
+        )
+        return total
+    }
+
+
     return (
         <CartContext.Provider value={{
             cartList,
@@ -54,6 +65,7 @@ const [cartList, setCartList] = useState([])
             clearCart,
             removeProd,
             cartItems,
+            cartTotal,
         }}>
             {children}
         </CartContext.Provider>

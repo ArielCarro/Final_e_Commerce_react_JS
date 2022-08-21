@@ -8,17 +8,15 @@ const ProdDetail = ({ prod }) => {
   const { name, priceIva, image, stock } = prod
 
   const [added,setAdded]=useState(false)
-  const {addToCart,cartList}=useCartContext()
+  const {addToCart}=useCartContext()
 
   const onAdd = (count) => {
     setAdded(true)
     addToCart({...prod,count })
 
 }
-    console.log(cartList);
 
   const detail=true
-  console.log(name)
   return (
     <div className="prodDetailCard">
       <img src={image} className="detailCardImg" alt='Product' />

@@ -1,6 +1,5 @@
 import React from 'react'
 import Cart from './Cart'
-import CartForm from './CartForm'
 import { useCartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
@@ -13,7 +12,6 @@ const CartContainer = () => {
     <div className='cartContainer'>{cartList.length > 0 ?
       <div className='cartContainerOk'>
       <Cart></Cart>
-      <CartForm></CartForm>
       </div>
       :
       <div className='emptyCart'>

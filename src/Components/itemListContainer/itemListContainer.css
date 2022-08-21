@@ -1,12 +1,21 @@
-.body{
+.body {
   background-color: rgb(236, 201, 61);
+}
+
+.spinnerClass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(236, 201, 61);
+  width: 100vw;
+  height: 100vh;
 }
 
 .countBtn {
   margin: 1px;
 }
 
-.counterComp{
+.counterComp {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,31 +28,31 @@
   align-items: center;
 }
 
-.catalogStyle{
+.catalogStyle {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.prodCard{
+.prodCard {
   margin: 10px;
   min-width: 20vw;
   max-width: 23vw;
 }
 
-.cardBody{
+.cardBody {
   background-color: rgb(230, 238, 187);
 }
 
-.cardTxt{
+.cardTxt {
   display: flex;
   justify-content: space-around;
   margin: 15px 0 15px 0;
   text-align: center;
 }
 
-.cardImg{
+.cardImg {
   border-bottom-style: solid;
   border-width: 1px;
-  border-color:  rgb(131, 152, 12);
+  border-color: rgb(131, 152, 12);
 }
