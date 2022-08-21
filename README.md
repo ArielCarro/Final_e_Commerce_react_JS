@@ -4,12 +4,11 @@ Este es un trabajo final para el curso de React JS de CoderHouse, se trata de un
 
 ### Demo
 
-![Demo](https://drive.google.com/file/d/16PwPgrBm0U58vvyo1hbd04BnWaysmrQL/view?usp=sharing)
+![Demo](https://drive.google.com/file/d/16PwPgrBm0U58vvyo1hbd04BnWaysmrQL/view)
 
 https://drive.google.com/file/d/1DBx_SXIBKq62A039zDC7BCv4K8oHyRtD/preview
 
 <iframe src="https://drive.google.com/file/d/1DBx_SXIBKq62A039zDC7BCv4K8oHyRtD/preview" width="640" height="480" allow="autoplay"></iframe>
-
 
 ### Dependencias
 
